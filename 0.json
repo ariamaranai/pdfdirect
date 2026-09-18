@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "priority": 2147483647,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "content-type",
+          "operation": "remove"
+        },
+        {
+          "header": "content-disposition",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "resourceTypes": ["main_frame"],
+      "requestMethods": ["get"],
+      "urlFilter": "|http*.pdf^"
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2147483646,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "resourceTypes": ["main_frame"],
+      "requestMethods": ["get"],
+      "responseHeaders": [
+        {
+          "header": "content-disposition",
+          "values": ["*.pdf*"]
+        }
+      ]
+    }
+  }
+]

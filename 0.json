@@ -7,7 +7,8 @@
       "responseHeaders": [
         {
           "header": "content-type",
-          "operation": "remove"
+          "operation": "set",
+          "value": "application/pdf"
         },
         {
           "header": "content-disposition",

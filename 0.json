@@ -19,7 +19,12 @@
     "condition": {
       "resourceTypes": ["main_frame"],
       "requestMethods": ["get"],
-      "urlFilter": "|http*.pdf^"
+      "urlFilter": "|http*.pdf^",
+      "excludedResponseHeaders": [{
+        "header": "content-type",
+        "values": ["text/html*"]
+      }],
+      "isUrlFilterCaseSensitive": true
     }
   },
   {
